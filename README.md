@@ -46,6 +46,6 @@ java Main <algorithm> <wordsFile> <startWord> <goalWord>
 
 
 ## Links
-- [Spesifikasi Tugas Kecil 3 Stima 2023/2024](https://docs.google.com/document/d/1TUvKn-vPXhLsxga8K7mjSUbYnInHp2TSRtGFWlngwYk/edit).
+- [Spesifikasi Tugas Kecil 3 Stima 2023/2024](https://docs.google.com/document/d/1TUvKn-vPXhLsxga8K7mjSUbYnInHp2TSRtGFWlngwYk/edit)
 - [This Repository](https://github.com/CrystalNoob/Tucil3_13522094)
-- [The Report [email std]]()
+- [The Report [email std]](https://docs.google.com/document/d/1i2vDa7INb8G4oAhNRbFXxOJe7hGMOALOc0LdMySZKhI/edit?usp=sharing)
