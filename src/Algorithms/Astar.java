@@ -22,6 +22,7 @@ public class Astar {
 		PriorityQueue<Node> queue = new PriorityQueue<>(Comparator.comparingInt(n -> n.getPriority()));
 		queue.offer(new Node(start, 0, Heuristic.heuristic(start, end), null));
 
+		int totalNode = 0;
 		Map<String, Node> parent = new HashMap<>();
 		Map<String, Integer> cost = new HashMap<>();
 		parent.put(start, null);
@@ -37,6 +38,7 @@ public class Astar {
 					currentNode = parent.get(currentNode.getWord());
 				}
 				Collections.reverse(path);
+				System.out.println("Node Visited: " + totalNode);
 				return path;
 			}
 
@@ -44,6 +46,7 @@ public class Astar {
 				int newCost = cost.get(currentNode.getWord()) + 1;
 
 				if(!cost.containsKey(neighbor) || newCost < cost.get(neighbor)) {
+					totalNode++;
 					int priority = newCost + Heuristic.heuristic(neighbor, end); // f(n) = g(n) + h(n)
 					queue.offer(new Node(neighbor, newCost, priority, currentNode));
 					cost.put(neighbor, newCost);
@@ -51,6 +54,7 @@ public class Astar {
 				}
 			}
 		}
+		System.out.println("Node Visited: " + totalNode);
 		return null;
 	}
 }

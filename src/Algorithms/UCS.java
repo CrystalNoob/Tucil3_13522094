@@ -23,6 +23,7 @@ public class UCS {
 		PriorityQueue<Node> queue = new PriorityQueue<>(Comparator.comparingInt(n -> n.getPriority()));
 		queue.offer(new Node(start, 0, 0, null));
 
+		int totalNode = 0;
 		Map<String, Node> parent = new HashMap<>();
 		Map<String, Integer> cost = new HashMap<>();
 		parent.put(start, null);
@@ -38,6 +39,7 @@ public class UCS {
 					currentNode = parent.get(currentNode.getWord());
 				}
 				Collections.reverse(path);
+				System.out.println("Node Visited: " + totalNode);
 				return path;
 			}
 
@@ -45,6 +47,7 @@ public class UCS {
 				int newCost = cost.get(currentNode.getWord()) + 1;
 
 				if(!cost.containsKey(neighbor) || newCost < cost.get(neighbor)) {
+					totalNode++;
 					int priority = newCost; // f(n) = g(n)
 					queue.offer(new Node(neighbor, newCost, priority, currentNode));
 					cost.put(neighbor, newCost);
@@ -52,6 +55,7 @@ public class UCS {
 				}
 			}
 		}
+		System.out.println("Node Visited: " + totalNode);
 		return null;
 	}
 }
