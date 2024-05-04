@@ -10,7 +10,7 @@
 
 sort -u src/Dictionary/words -o words.txt
 rg '^[A-Za-z]+$' words.txt > words_alphabet.txt
-mv words_alphabet.txt bin/words.txt
+mv words_alphabet.txt bin/dictionary.txt
 rm words.txt
 
 # rg version used:
