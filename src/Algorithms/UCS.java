@@ -15,7 +15,7 @@ import Dictionary.Dictionary;
 public class UCS {
 	public static List<String> findPath(String start, String end, Set<String> wordSet) throws Exception {
 		if (!wordSet.contains(start)) {
-			throw new Exception("Start word doesn't!");
+			throw new Exception("Start word doesn't exist!");
 		} else if (!wordSet.contains(end)) {
 			throw new Exception("End word doesn't exist!");
 		}
