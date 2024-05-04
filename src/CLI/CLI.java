@@ -15,6 +15,10 @@ public class CLI {
 		String endWord = args[3].toLowerCase();
         Set<String> dictionary = Dictionary.Wordset(filePath);
 
+		if (startWord.length() != endWord.length()) {
+			throw new Exception("Start word and end word's length are different!");
+		}
+
 		List<String> path;
 		long startTime, endTime;
 
