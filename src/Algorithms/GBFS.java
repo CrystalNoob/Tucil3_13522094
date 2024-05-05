@@ -28,13 +28,14 @@ public class GBFS {
 		Map<String, Node> parent = new HashMap<>();
 		parent.put(start, null);
 
-		while(!queue.isEmpty()) {
+		while (!queue.isEmpty()) {
 			Node currentNode = queue.remove();
+			totalNode++;
 			visited.add(currentNode.getWord());
 
-			if(currentNode.getWord().equals(end)) {
+			if (currentNode.getWord().equals(end)) {
 				List<String> path = new ArrayList<>();
-				while(currentNode != null) {
+				while (currentNode != null) {
 					path.add(currentNode.getWord());
 					currentNode = parent.get(currentNode.getWord());
 				}
@@ -43,9 +44,8 @@ public class GBFS {
 				return path;
 			}
 
-			for(String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
-				if(!visited.contains(neighbor)) {
-					totalNode++;
+			for (String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
+				if (!visited.contains(neighbor)) {
 					int priority = Heuristic.heuristic(neighbor, end);	// f(n) = h(n)
 					queue.offer(new Node(neighbor, 0, priority, null));
 					parent.put(neighbor, currentNode);

@@ -29,12 +29,13 @@ public class UCS {
 		parent.put(start, null);
 		cost.put(start, 0);
 
-		while(!queue.isEmpty()) {
+		while (!queue.isEmpty()) {
 			Node currentNode = queue.remove();
-			
-			if(currentNode.getWord().equals(end)) {
+			totalNode++;
+
+			if (currentNode.getWord().equals(end)) {
 				List<String> path = new ArrayList<>();
-				while(currentNode != null) {
+				while (currentNode != null) {
 					path.add(currentNode.getWord());
 					currentNode = parent.get(currentNode.getWord());
 				}
@@ -42,11 +43,10 @@ public class UCS {
 				System.out.println("Node Visited: " + totalNode);
 				return path;
 			}
-			
+
 			int newCost = cost.get(currentNode.getWord()) + 1;
-			for(String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
-				if(!cost.containsKey(neighbor) || newCost < cost.get(neighbor)) {
-					totalNode++;
+			for (String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
+				if (!cost.containsKey(neighbor) || newCost < cost.get(neighbor)) {
 					int priority = newCost; // f(n) = g(n)
 					queue.offer(new Node(neighbor, newCost, priority, currentNode));
 					cost.put(neighbor, newCost);
