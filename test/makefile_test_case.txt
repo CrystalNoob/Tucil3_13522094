@@ -1,0 +1,24 @@
+1. aloof hello
+	@cd $(BIN); $(JX) Main astar dictionary.txt aloof hello
+	@cd $(BIN); $(JX) Main ucs dictionary.txt aloof hello
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt aloof hello
+2. wise sage
+	@cd $(BIN); $(JX) Main astar dictionary.txt wise sage
+	@cd $(BIN); $(JX) Main ucs dictionary.txt wise sage
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt wise sage
+3. coil wind
+	@cd $(BIN); $(JX) Main astar dictionary.txt coil wind
+	@cd $(BIN); $(JX) Main ucs dictionary.txt coil wind
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt coil wind
+4. lamp post
+	@cd $(BIN); $(JX) Main astar dictionary.txt lamp post
+	@cd $(BIN); $(JX) Main ucs dictionary.txt lamp post
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt lamp post
+5. mitts scarf
+	@cd $(BIN); $(JX) Main astar dictionary.txt mitts scarf
+	@cd $(BIN); $(JX) Main ucs dictionary.txt mitts scarf
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt mitts scarf
+6. sleep dream
+	@cd $(BIN); $(JX) Main astar dictionary.txt sleep dream
+	@cd $(BIN); $(JX) Main ucs dictionary.txt sleep dream
+	@cd $(BIN); $(JX) Main gbfs dictionary.txt sleep dream

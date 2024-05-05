@@ -1,0 +1,14 @@
+aloof hello
+wise sage
+coil wind
+lamp post
+mitts scarf
+sleep dream
+
+results:
+shouldn't exist, aloof doesn't have any neighbor based on findings by Donald Knuth in 2006
+optimal based on wordwormdormdork.com
+optimal based on wordwormdormdork.com
+optimal based on wordwormdormdork.com
+optimal based on wordwormdormdork.com
+optimal based on wordwormdormdork.com
