@@ -30,10 +30,10 @@ make build
 
 
 ## Usage
-Edit the Makefile and run it using:
+Edit the __run__ part in Makefile, then run it using:
 
 ```shell
-make
+make run
 ```
 
 Or run it manually using:
@@ -41,7 +41,7 @@ Or run it manually using:
 ```shell
 make build
 cd bin/
-java Main <algorithm> <wordsFile> <startWord> <goalWord>
+java Main <algorithm> <PathToDictionary> <startWord> <goalWord>
 ```
 
 
