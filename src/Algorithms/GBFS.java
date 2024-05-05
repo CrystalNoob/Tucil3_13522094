@@ -25,7 +25,7 @@ public class GBFS {
 
 		int totalNode = 0;
 		Set<String> visited = new HashSet<>();
-		Map<String, Node> parent = new HashMap<>();	// ONLY USED TO TRACK PATH TAKEN, NOT USED IN THE ALGORITHM
+		Map<String, Node> parent = new HashMap<>();
 		parent.put(start, null);
 
 		while(!queue.isEmpty()) {
@@ -44,11 +44,11 @@ public class GBFS {
 			}
 
 			for(String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
-				if(!visited.contains(neighbor)) {	// TO PREVENT VISITING THE VISITED
+				if(!visited.contains(neighbor)) {
 					totalNode++;
 					int priority = Heuristic.heuristic(neighbor, end);	// f(n) = h(n)
-					queue.offer(new Node(neighbor, currentNode.getCost() + 1, priority, null));
-					parent.put(neighbor, currentNode);	// JUST FOR PATH TRACKING
+					queue.offer(new Node(neighbor, 0, priority, null));
+					parent.put(neighbor, currentNode);
 				}
 			}
 		}
