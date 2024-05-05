@@ -3,7 +3,7 @@
 
 > Tugas Kecil Strategi Algoritma Kelas 02 **[Tucil3_13522094]**
 >
-> Oleh 13522094 Andhika Tantyo Anugrah:<br>
+> Oleh 13522094 Andhika Tantyo Anugrah<br>
 >
 > Sekolah Teknik Elektro dan Informatika<br>
 > Institut Teknologi Bandung<br>
