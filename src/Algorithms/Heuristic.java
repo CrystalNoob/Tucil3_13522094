@@ -3,10 +3,11 @@ package Algorithms;
 // import java.util.Arrays;
 
 public class Heuristic {
+	// Calculate Hamming Distance
 	public static int heuristic(String start, String goal) {
 		int distance = 0;
-		for(int i = 0; i < start.length(); i++) {
-			if(start.charAt(i) != goal.charAt(i)) {
+		for (int i = 0; i < start.length(); i++) {
+			if (start.charAt(i) != goal.charAt(i)) {
 				distance++;
 			}
 		}
