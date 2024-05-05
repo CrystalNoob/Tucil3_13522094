@@ -41,10 +41,9 @@ public class Astar {
 				System.out.println("Node Visited: " + totalNode);
 				return path;
 			}
-
+			
+			int newCost = cost.get(currentNode.getWord()) + 1;
 			for(String neighbor : Dictionary.getNeighbors(currentNode.getWord(), wordSet)) {
-				int newCost = cost.get(currentNode.getWord()) + 1;
-
 				if(!cost.containsKey(neighbor) || newCost < cost.get(neighbor)) {
 					totalNode++;
 					int priority = newCost + Heuristic.heuristic(neighbor, end); // f(n) = g(n) + h(n)
